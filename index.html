@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Business Calculator</h1>
+        
+        <div>
+            <label for="costPrice">Cost Price:</label>
+            <input type="number" id="costPrice" placeholder="Enter Cost Price">
+        </div>
+
+        <div>
+            <label for="markup">Markup Percentage (%):</label>
+            <input type="number" id="markup" placeholder="Enter Markup Percentage">
+        </div>
+
+        <div>
+            <label for="gstRate">GST Rate (%):</label>
+            <input type="number" id="gstRate" placeholder="Enter GST Rate">
+        </div>
+
+        <div>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+
+        <div class="results">
+            <p id="sellingPrice">Selling Price: $0.00</p>
+            <p id="gstAmount">GST Amount: $0.00</p>
+            <p id="totalPrice">Total Price (incl. GST): $0.00</p>
+        </div>
+    </div>
+
+    <script src="js/javascript"></script>
+</body>
+</html>
+

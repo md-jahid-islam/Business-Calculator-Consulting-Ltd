@@ -1,0 +1,24 @@
+function calculate() {
+    const costPrice = parseFloat(document.getElementById('costPrice').value);
+    const markupPercentage = parseFloat(document.getElementById('markup').value);
+    const gstRate = parseFloat(document.getElementById('gstRate').value);
+
+    if (isNaN(costPrice) || isNaN(markupPercentage) || isNaN(gstRate)) {
+        alert('Please enter valid numbers.');
+        return;
+    }
+
+    // Calculate Selling Price based on Markup
+    const sellingPrice = costPrice + (costPrice * (markupPercentage / 100));
+
+    // Calculate GST Amount
+    const gstAmount = sellingPrice * (gstRate / 100);
+
+    // Calculate Total Price including GST
+    const totalPrice = sellingPrice + gstAmount;
+
+    // Display Results
+    document.getElementById('sellingPrice').innerText = `Selling Price: $${sellingPrice.toFixed(2)}`;
+    document.getElementById('gstAmount').innerText = `GST Amount: $${gstAmount.toFixed(2)}`;
+    document.getElementById('totalPrice').innerText = `Total Price (incl. GST): $${totalPrice.toFixed(2)}`;
+}
